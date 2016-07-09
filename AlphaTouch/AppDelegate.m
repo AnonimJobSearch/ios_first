@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -20,11 +20,8 @@
     // Override point for customization after application launch.
     CGRect viewRect = [[UIScreen mainScreen] bounds];
     self.window = [[UIWindow alloc] initWithFrame:viewRect];
-    UIViewController *colorTouchVC = [[UIViewController alloc] init];
-    UIView *colorView = [[UIView alloc] initWithFrame:viewRect];
-    colorView.backgroundColor = [UIColor yellowColor];
-    colorTouchVC.view = colorView;
-    self.window.rootViewController = colorTouchVC;
+    self.viewController = [[ViewController alloc] init];
+    self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;
 }
